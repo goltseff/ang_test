@@ -1,0 +1,12 @@
+<div style="margin:20px;padding:5px;border:2px solid #000;width:400px;">
+  Карточка пользователя:
+  <br><a href="#" (click)="changeImage()">поменять картинку на {{ ((showimage==3)?'меньшую':'большую') }}</a>
+  <div *ngIf="(showimage == 1)"> <img src="{{ user.picture.thumbnail }}"> </div>
+  <div *ngIf="(showimage == 2)"> <img src="{{ user.picture.medium }}"> </div>
+  <div *ngIf="(showimage == 3)"> <img src="{{ user.picture.large }}"> </div>
+  <br>  Email: {{ user.email }} 
+  <br>  Телефон: {{ user.cell }} 
+  <br>  Дняфка: {{ user.dob | date : 'dd.MM.yyyy HH:mm' }} 
+  <br>  Дняфка с пайпом: {{ user.dob | dateFormatPipe }} 
+  <br> <a href="#" (click)="userDelClk(user.picture.thumbnail)">удали меня!</a>
+</div>
