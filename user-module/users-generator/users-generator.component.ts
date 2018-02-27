@@ -7,7 +7,6 @@ import 'rxjs/add/observable/interval';
 @Component({
   selector: 'app-users-generator',
   templateUrl: './users-generator.component.html',
-  styleUrls: ['./users-generator.component.css'],
   providers: [UserService]
 })
 export class UsersGeneratorComponent  {
